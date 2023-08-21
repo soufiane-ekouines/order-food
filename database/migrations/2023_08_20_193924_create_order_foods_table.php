@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer('qte');
             $table->string('cmt');
-            $table->foreign('food_id');
-            $table->foreign('order_id');
+            $table->foreignId('food_id');
+            $table->foreignId('order_id');
             $table->timestamps();
         });
     }

@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('cmt');
             $table->string('name');
+            $table->string('Email');
+            $table->string('numero');
             $table->integer('table');
             $table->string('status');
             $table->string('type');
