@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class OrderController extends Controller
 {
@@ -23,6 +24,14 @@ class OrderController extends Controller
         return view('menu',compact('table'));
     }
 
+
+    public function order(Request $request, $id)
+    {
+        Cookie::make('request_list', $id, 60);   
+        $cookieValue = Cookie::get('request_list');
+        dd($cookieValue);
+        return view('menu',compact('table'));
+    }
     /**
      * Store a newly created resource in storage.
      */

@@ -257,7 +257,8 @@
                     <h6>
                       $15
                     </h6>
-                    <a href="">
+                    <a href="{{ route('order', [1]) }}" data-toggle="modal" data-target="#exampleModal">
+                     
                       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                         <g>
                           <g>
@@ -311,6 +312,27 @@
                         </g>
                       </svg>
                     </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <form method="POST" action="{{ route('order', [1]) }}">
+                              @csrf
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            
+                          </div>
+                         
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

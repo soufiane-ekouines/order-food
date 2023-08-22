@@ -22,3 +22,4 @@ Route::get('/menu', function () {
 })->name("menu");
 
 Route::get('menu/{table}', [OrderController::class,'create']);
+Route::post('order/{id}', [OrderController::class,'order'])->name('order');
